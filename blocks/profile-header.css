@@ -76,7 +76,7 @@
   color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
   border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
   cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-  background-image: url(/images/EditButtonHover.png);
+  background-image: url("/images/EditButtonHover.png");
 }
 
 .profile-add-button {
@@ -99,7 +99,7 @@
   color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
   border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
   cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-  background-image: url(/images/AddButtonHover.png);
+  background-image: url("/images/AddButtonHover.png");
 }
 
 /* Estilos del contenedor del popup del perfil (modal) */
@@ -175,6 +175,14 @@
     top: 14px;
   }
 
+  .profile-name-edit-button:hover {
+    background-color: #545454; /* Color de fondo al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
+    border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    background-image: url("/images/EditButtonHover.png");
+  }
+
   /* Estilos del botón de añadir (btn--add) */
   .profile-add-button {
     width: 282px; /* Reducir el ancho del botón */
@@ -196,6 +204,6 @@
     color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
     border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
     cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-    background-image: url(/images/AddButtonHover.png);
+    background-image: url("/images/AddButtonHover.png");
   }
 }
