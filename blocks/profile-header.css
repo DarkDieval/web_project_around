@@ -62,7 +62,7 @@
   background-color: transparent;
   border: 1px solid #ffffff;
   cursor: pointer;
-  background-image: url("/images/EditButton.png");
+  background-image: url("../images/EditButton.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -76,7 +76,7 @@
   color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
   border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
   cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-  background-image: url("/images/EditButtonHover.png");
+  background-image: url("../images/EditButtonHover.png");
 }
 
 .profile-add-button {
@@ -88,7 +88,7 @@
   color: #ffffff;
   cursor: pointer;
   border-radius: 5px;
-  background-image: url("/images/LargeAddButton.png");
+  background-image: url("../images/LargeAddButton.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -99,7 +99,7 @@
   color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
   border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
   cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-  background-image: url("/images/AddButtonHover.png");
+  background-image: url("../images/AddButtonHover.png");
 }
 
 /* Estilos del contenedor del popup del perfil (modal) */
@@ -166,7 +166,7 @@
     background-color: transparent;
     border: 1px solid #ffffff;
     cursor: pointer;
-    background-image: url("/images/EditButton.png");
+    background-image: url("../images/EditButton.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -180,7 +180,7 @@
     color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
     border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
     cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-    background-image: url("/images/EditButtonHover.png");
+    background-image: url("../images/EditButtonHover.png");
   }
 
   /* Estilos del botón de añadir (btn--add) */
@@ -193,7 +193,7 @@
     color: #ffffff;
     cursor: pointer;
     border-radius: 5px;
-    background-image: url("/images/LargeAddButton.png");
+    background-image: url("../images/LargeAddButton.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -204,6 +204,6 @@
     color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
     border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
     cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-    background-image: url("/images/AddButtonHover.png");
+    background-image: url("../images/AddButtonHover.png");
   }
 }
