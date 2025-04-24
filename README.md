@@ -2,6 +2,8 @@
 
 **Dirección del proyecto:**
 
+https://darkdieval.github.io/web_project_around/
+
 **Descripción del proyecto:**
 
 Este proyecto web se centra en la creación de una plataforma interactiva para explorar y compartir lugares de interés. La interfaz actual presenta una sección de perfil de usuario con información editable y una galería de imágenes con funcionalidades básicas de "me gusta". El diseño es adaptable a diferentes tamaños de pantalla, proporcionando una experiencia de usuario consistente en dispositivos de escritorio y móviles.
