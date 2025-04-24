@@ -28,7 +28,11 @@ function handleSubmitName(event) {
 
   const name = inputName.value;
 
-  spanName.textContent = name;
+  if (name.trim() === "") {
+    spanName.textContent = "Insert Name";
+  } else {
+    spanName.textContent = name;
+  }
 
   inputName.value = "";
 
@@ -40,7 +44,11 @@ function handleSubmitAbout(event) {
 
   const about = inputAbout.value;
 
-  spanAbout.textContent = about;
+  if (about.trim() === "") {
+    spanAbout.textContent = "Insert Activity";
+  } else {
+    spanAbout.textContent = about;
+  }
 
   inputAbout.value = "";
 
