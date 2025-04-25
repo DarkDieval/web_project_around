@@ -138,8 +138,8 @@
 
   .profile-popup-close-button.outside {
     position: absolute;
-    top: 100px; /* Ajustar posición */
-    right: 18px; /* Ajustar posición */
+    top: 175px; /* Ajustar posición */
+    right: 305px; /* Ajustar posición */
     border-radius: 50%;
     display: flex;
     justify-content: center;
