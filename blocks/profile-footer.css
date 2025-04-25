@@ -19,3 +19,17 @@
     line-height: 100%;
   }
 }
+
+@media screen and (min-width: 321px) and (max-width: 1024px) {
+  .profile-footer {
+    padding-bottom: 36px; /* Reducir el padding inferior */
+    margin-left: 19px;
+  }
+
+  .profile-footer-text {
+    color: #545454;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
