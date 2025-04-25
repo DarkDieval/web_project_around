@@ -102,9 +102,7 @@
   background-image: url("../images/AddButtonHover.png");
 }
 
-/* Estilos del contenedor del popup del perfil (modal) */
-
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 321px) and (max-width: 1024px) {
   .profile-header-information {
     width: 100%;
     margin-bottom: 30px;
@@ -119,8 +117,8 @@
   }
 
   .profile-header-img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -207,7 +205,9 @@
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 1024px) {
+/* Estilos del contenedor del popup del perfil (modal) */
+
+@media screen and (max-width: 320px) {
   .profile-header-information {
     width: 100%;
     margin-bottom: 30px;
@@ -222,8 +222,8 @@
   }
 
   .profile-header-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
   }

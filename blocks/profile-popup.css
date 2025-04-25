@@ -80,7 +80,7 @@
   transition: fill 0.3s ease; /* Transición suave */
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 321px) and (max-width: 1024px) {
   .profile-popup-container {
     position: fixed;
     top: 0;
@@ -164,7 +164,7 @@
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 1024px) {
+@media screen and (max-width: 320px) {
   .profile-popup-container {
     position: fixed;
     top: 0;

@@ -63,7 +63,7 @@
   padding: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 321px) and (max-width: 1024px) {
   .profile-gallery {
     width: 100%;
     height: auto;
@@ -132,7 +132,7 @@
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 1024px) {
+@media screen and (max-width: 320px) {
   .profile-gallery {
     width: 100%;
     height: auto;
