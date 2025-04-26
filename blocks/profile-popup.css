@@ -150,7 +150,7 @@
 
   .profile-popup-close-button.outside {
     position: absolute; /* Ahora absoluto respecto a .profile-content-wrapper */
-    top: -30px; /* Ajustamos la posición para que sobresalga un poco */
+    top: -40px; /* Ajustamos la posición para que sobresalga un poco */
     right: -10px; /* Ajustamos la posición para que sobresalga un poco */
     border-radius: 50%;
     display: flex;
@@ -168,8 +168,8 @@
   }
 
   .profile-popup-close-button.outside svg {
-    width: 20px; /* Ajustamos el tamaño del SVG dentro del botón */
-    height: 20px;
+    width: 26px; /* Ajustamos el tamaño del SVG dentro del botón */
+    height: 26px;
     fill: currentColor;
   }
 }
@@ -238,7 +238,7 @@
 
   .profile-popup-close-button.outside {
     position: absolute; /* Ahora absoluto respecto a .profile-content-wrapper */
-    top: -30px; /* Ajustamos la posición para que sobresalga un poco */
+    top: -40px; /* Ajustamos la posición para que sobresalga un poco */
     right: -10px; /* Ajustamos la posición para que sobresalga un poco */
     border-radius: 50%;
     display: flex;
@@ -256,8 +256,8 @@
   }
 
   .profile-popup-close-button.outside svg {
-    width: 20px; /* Ajustamos el tamaño del SVG dentro del botón */
-    height: 20px;
+    width: 26px; /* Ajustamos el tamaño del SVG dentro del botón */
+    height: 26px;
     fill: currentColor;
   }
 }
@@ -326,7 +326,7 @@
 
   .profile-popup-close-button.outside {
     position: absolute; /* Ahora absoluto respecto a .profile-content-wrapper */
-    top: -30px; /* Ajustamos la posición para que sobresalga un poco */
+    top: -40px; /* Ajustamos la posición para que sobresalga un poco */
     right: -10px; /* Ajustamos la posición para que sobresalga un poco */
     border-radius: 50%;
     display: flex;
@@ -344,8 +344,8 @@
   }
 
   .profile-popup-close-button.outside svg {
-    width: 20px; /* Ajustamos el tamaño del SVG dentro del botón */
-    height: 20px;
+    width: 26px; /* Ajustamos el tamaño del SVG dentro del botón */
+    height: 26px;
     fill: currentColor;
   }
 }
@@ -415,7 +415,7 @@
 
   .profile-popup-close-button.outside {
     position: absolute; /* Ahora absoluto respecto a .profile-content-wrapper */
-    top: -30px; /* Ajustamos la posición para que sobresalga un poco */
+    top: -40px; /* Ajustamos la posición para que sobresalga un poco */
     right: -10px; /* Ajustamos la posición para que sobresalga un poco */
     border-radius: 50%;
     display: flex;
@@ -433,8 +433,8 @@
   }
 
   .profile-popup-close-button.outside svg {
-    width: 20px; /* Ajustamos el tamaño del SVG dentro del botón */
-    height: 20px;
+    width: 26px; /* Ajustamos el tamaño del SVG dentro del botón */
+    height: 26px;
     fill: currentColor;
   }
 }
@@ -504,7 +504,7 @@
 
   .profile-popup-close-button.outside {
     position: absolute; /* Ahora absoluto respecto a .profile-content-wrapper */
-    top: -30px; /* Ajustamos la posición para que sobresalga un poco */
+    top: -40px; /* Ajustamos la posición para que sobresalga un poco */
     right: -10px; /* Ajustamos la posición para que sobresalga un poco */
     border-radius: 50%;
     display: flex;
@@ -522,8 +522,8 @@
   }
 
   .profile-popup-close-button.outside svg {
-    width: 20px; /* Ajustamos el tamaño del SVG dentro del botón */
-    height: 20px;
+    width: 26px; /* Ajustamos el tamaño del SVG dentro del botón */
+    height: 26px;
     fill: currentColor;
   }
 }
