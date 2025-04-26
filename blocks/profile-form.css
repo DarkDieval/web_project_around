@@ -28,13 +28,14 @@
 }
 
 .profile-form input[type="text"] {
-  width: 358px;
+  width: 354px;
   border: none;
   border-bottom: 1px solid #c4c4c4;
   border-radius: 0;
   font-size: 1em;
   background-color: transparent;
   color: #000;
+  margin-left: 10px;
 }
 
 .profile-form input[type="text"]::placeholder {
@@ -50,9 +51,10 @@
   font-size: 1em;
   cursor: pointer;
   display: block;
-  width: 100%;
+  width: 358px;
   text-align: center;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .profile-save-button:hover {
