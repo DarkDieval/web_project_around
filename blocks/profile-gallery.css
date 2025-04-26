@@ -270,6 +270,75 @@
   }
 }
 
+@media screen and (min-width: 321px) and (max-width: 543px) {
+  .profile-gallery {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Reducir el margen inferior */
+  }
+
+  .profile-gallery-container {
+    display: flex; /* Cambiar a flex para una sola columna */
+    flex-direction: column; /* Apilar las tarjetas */
+    width: 100%; /* Ocupar todo el ancho */
+    row-gap: 10px; /* Reducir el espacio entre tarjetas */
+    column-gap: 0; /* Eliminar el espacio entre columnas */
+    margin-bottom: 0px;
+    align-items: center; /* Centrar las tarjetas */
+  }
+
+  .profile-gallery-card {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Las tarjetas ocupan un 90% del ancho */
+  }
+
+  .profile-gallery__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .profile-gallery-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px; /* Reducir el padding */
+  }
+
+  .profile-gallery-card__title {
+    font-family: "Inter-Black";
+    margin: 0;
+    font-weight: 900;
+    font-size: 18px; /* Reducir el tamaño del título de la tarjeta */
+    line-height: 100%;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  .profile-like-button {
+    width: 18px; /* Reducir el tamaño del botón */
+    height: 16px; /* Reducir el tamaño del botón */
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url("/images/LikeButton.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .profile-gallery {
     width: 100%;

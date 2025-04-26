@@ -46,6 +46,18 @@
   }
 }
 
+@media screen and (min-width: 321px) and (max-width: 543px) {
+  .page {
+    font-family: "Inter-Medium", "Inter-Regular", sans-serif;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    color: #ffffff;
+    background-color: #000000;
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .page {
     font-family: "Inter-Medium", "Inter-Regular", sans-serif;

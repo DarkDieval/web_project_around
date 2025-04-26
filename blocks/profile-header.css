@@ -413,6 +413,109 @@
 
 /* Estilos del contenedor del popup del perfil (modal) */
 
+@media screen and (min-width: 321px) and (max-width: 543px) {
+  .profile-header-information {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .profile-header-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .profile-header-information-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-header-edit-information-container {
+    position: relative;
+  }
+
+  .profile-header-name {
+    font-size: 28px; /* Reducir el tamaño del nombre */
+  }
+
+  .span-profile-name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 48px;
+  }
+
+  .profile-header-occupation {
+    text-align: center; /* Centrar la ocupación */
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .span-profile-about {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  /* Estilos del botón de edición del nombre */
+  .profile-name-edit-button {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    background-image: url("../images/EditButton.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    right: 10px;
+    top: 14px;
+  }
+
+  .profile-name-edit-button:hover {
+    background-color: #545454; /* Color de fondo al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
+    border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    background-image: url("../images/EditButtonHover.png");
+  }
+
+  /* Estilos del botón de añadir (btn--add) */
+  .profile-add-button {
+    width: 282px; /* Reducir el ancho del botón */
+    height: 50px; /* Reducir la altura del botón */
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url("../images/LargeAddButton.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0;
+  }
+
+  .profile-add-button:hover {
+    color: #fff; /* Color del texto al pasar el mouse (opcional, puedes ajustarlo) */
+    border-color: #545454; /* Color del borde al pasar el mouse (si tienen borde) */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    background-image: url("../images/AddButtonHover.png");
+  }
+}
+
 @media screen and (max-width: 320px) {
   .profile-header-information {
     width: 100%;
