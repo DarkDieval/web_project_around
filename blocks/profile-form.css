@@ -99,6 +99,7 @@
     font-size: 0.9em;
     background-color: transparent;
     color: #000;
+    margin-left: 0;
   }
 
   .profile-form input[type="text"]::placeholder {
@@ -118,6 +119,7 @@
     width: 100%;
     text-align: center;
     margin-top: 8px; /* Reducir el margen */
+    margin-left: 0;
   }
 
   .profile-save-button:hover {
@@ -163,6 +165,7 @@
     font-size: 0.9em;
     background-color: transparent;
     color: #000;
+    margin-left: 0;
   }
 
   .profile-form input[type="text"]::placeholder {
@@ -182,6 +185,7 @@
     width: 100%;
     text-align: center;
     margin-top: 8px; /* Reducir el margen */
+    margin-left: 0;
   }
 
   .profile-save-button:hover {
@@ -283,7 +287,7 @@
   }
 
   .profile-form input[type="text"] {
-    width: 238px;
+    width: 190px;
     height: 26px;
     border: none;
     border-bottom: 1px solid #c4c4c4;
