@@ -50,7 +50,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background-image: url("/images/LikeButton.png");
+  background-image: url("../images/LikeButton.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -58,7 +58,7 @@
 }
 
 .profile-like-button.like-button-active {
-  background-image: url("/images/LikeButtonClic.png"); /* Corazón relleno */
+  background-image: url("../images/LikeButtonClic.png"); /* Corazón relleno */
 }
 
 .profile-gallery-remove-card-button {
