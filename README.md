@@ -6,23 +6,35 @@ https://darkdieval.github.io/web_project_around/
 
 **Descripción del proyecto:**
 
-Este proyecto web se centra en la creación de una plataforma interactiva para explorar y compartir lugares de interés. La interfaz actual presenta una sección de perfil de usuario con información editable y una galería de imágenes con funcionalidades básicas de "me gusta". El diseño es adaptable a diferentes tamaños de pantalla, proporcionando una experiencia de usuario consistente en dispositivos de escritorio y móviles.
+Este proyecto web es una plataforma interactiva diseñada para explorar y compartir lugares de interés. La interfaz presenta las siguientes funcionalidades principales:
+
+- **Perfil de usuario:** Sección dedicada a la información del usuario, que incluye nombre y descripción. Permite la edición de esta información.
+- **Galería de imágenes:** Muestra una colección de imágenes de lugares, con la posibilidad de dar "me gusta" a las imágenes.
+- **Popup de visualización de imágenes:** Permite ver las imágenes de la galería en tamaño completo.
+
+El diseño es adaptable a diferentes tamaños de pantalla, asegurando una experiencia de usuario consistente tanto en dispositivos de escritorio como móviles.
 
 **Tecnologías usadas:**
 
-- **HTML:** Estructura y contenido de la página web.
-- **CSS:** Estilos visuales, diseño y adaptabilidad (responsive design) mediante media queries.
-- **JavaScript:** (Mencionar si se utiliza, aunque no se evidenció en el código proporcionado. Si planeas usarlo, inclúyelo aquí).
+- **HTML:** Define la estructura y el contenido de la página web.
+- **CSS:** Proporciona estilos visuales, diseño y adaptabilidad (diseño responsivo) mediante media queries.
+- **JavaScript:** Permite la manipulación del DOM para crear una experiencia de usuario dinámica e interactiva. Se utiliza para abrir y cerrar modales, manejar el envío de formularios, mostrar imágenes en tamaño completo y gestionar la funcionalidad de "me gusta".
+
+**Funcionalidades:**
+
+- **Edición del perfil de usuario:** Los usuarios pueden modificar su nombre y descripción.
+- **Visualización de imágenes de la galería:** Se muestra una colección de imágenes que representan diversos lugares.
+- **Funcionalidad de "Me gusta":** Los usuarios pueden indicar que les gusta una imagen.
+- **Visualización de imágenes en tamaño completo:** Al hacer clic en una imagen de la galería, se abre un popup que muestra la imagen en detalle.
+- **Añadir nuevas imágenes a la galería:** Los usuarios pueden agregar nuevas tarjetas de imágenes a la galería.
 
 **Planes de mejora:**
 
-- Implementación completa de la funcionalidad de edición de perfil, permitiendo a los usuarios guardar sus cambios.
-- Desarrollo de la funcionalidad para añadir nuevas imágenes a la galería.
-- Mejora de la interacción de los "me gusta", posiblemente con persistencia de datos.
-- Optimización de la carga de imágenes para mejorar el rendimiento.
-- Considerar la adición de validaciones en los formularios.
-- Explorar la posibilidad de integrar una API para obtener información de lugares o funcionalidades adicionales.
-- (Añade cualquier otro plan específico que tengas para el futuro del proyecto).
+- **Validación de formularios:** Implementar validaciones en los formularios de edición de perfil y de agregar imagen para asegurar que la información ingresada sea correcta.
+- **Persistencia de datos:** Explorar mecanismos para guardar la información del perfil y los "me gusta" de forma permanente (por ejemplo, utilizando LocalStorage o una API).
+- **Optimización del rendimiento:** Mejorar la carga de imágenes y otros recursos para optimizar el rendimiento de la página.
+- **Mejoras en la interfaz de usuario:** Considerar mejoras en la interfaz, como transiciones y animaciones, para una experiencia más atractiva.
+- **Integración de API:** Investigar la posibilidad de integrar una API para obtener información adicional sobre los lugares mostrados o para añadir funcionalidades extra.
 
 **Autor:**
 
