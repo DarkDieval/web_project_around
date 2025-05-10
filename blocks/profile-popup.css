@@ -440,87 +440,74 @@
 }
 
 @media screen and (max-width: 320px) {
-  .profile-popup-container {
+  .popup-image {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex; /* Aseguramos que sea flex para el centrado */
-    justify-content: center; /* Centra horizontalmente los hijos */
-    align-items: center; /* Centra verticalmente los hijos */
-    z-index: 1000;
-    display: none;
-  }
-
-  .profile-popup-container.active {
-    display: flex;
-  }
-
-  .profile-content {
-    background-color: #ffffff; /* Cambiado según la última solicitud */
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 240px; /* Un ancho más común para móviles */
-    height: auto; /* Ajustar la altura automáticamente */
-    overflow: hidden;
-    position: relative;
-  }
-
-  .profile-popup-header {
-    display: flex;
-    border-bottom: 1px solid #ffffff;
-  }
-
-  .profile-popup-title {
-    font-family: "Inter-Black";
-    font-weight: 900;
-    font-size: 18px; /* Reducir el tamaño del título del modal */
-    line-height: 100%;
-    color: #000000;
-    margin-left: 22px;
-    margin-top: 25px;
-  }
-
-  .profile-popup-close-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em; /* Reducir el tamaño del botón */
-    color: #888;
-    line-height: 1;
-    position: absolute;
-    top: -5px; /* Ajustar posición */
-    right: -5px; /* Ajustar posición */
-    z-index: 10;
-  }
-
-  .profile-content-wrapper {
-    display: flex;
-    position: relative; /* Establecemos un contexto de posicionamiento para la "X" */
-    /* Las dimensiones se heredarán del .profile-content */
-  }
-
-  .profile-popup-close-button.outside {
-    position: absolute; /* Ahora absoluto respecto a .profile-content-wrapper */
-    top: -40px; /* Ajustamos la posición para que sobresalga un poco */
-    right: -10px; /* Ajustamos la posición para que sobresalga un poco */
-    border-radius: 50%;
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    color: #ffffff;
-    font-size: 0.8em;
-    padding: 5px; /* Añadimos un poco de padding para que sea más fácil hacer clic */
-    line-height: 1;
-    z-index: 10; /* Aseguramos que esté por encima del .profile-content */
+    z-index: 1000;
   }
 
-  .profile-popup-close-button:hover {
-    color: #545454; /* Cambia el color del icono al pasar el mouse */
+  .popup-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Para mantener la proporción y evitar recortes */
   }
 
+  .popup-image .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .popup-image .close-button:hover {
+    opacity: 1;
+  }
+
+  /* Estilos adicionales para mejorar la apariencia de la galería */
+  .profile-gallery-card {
+    /* Estilos existentes */
+    overflow: hidden; /* Importante para que la imagen no se desborde */
+  }
+
+  .profile-gallery__image {
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+  }
+
+  .profile-gallery__image:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+  }
+
+  /* Nuevo CSS para el botón de Me gusta */
+  .profile-like-button {
+    width: 21px;
+    height: 19px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url("/images/LikeButton.png"); /* Corazón original */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0;
+  }
+
+  .profile-like-button.like-button-active {
+    background-image: url("/images/LikeButtonClic.png"); /* Corazón relleno */
+  }
   .profile-popup-close-button.outside svg {
     width: 26px; /* Ajustamos el tamaño del SVG dentro del botón */
     height: 26px;

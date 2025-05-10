@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Around the U.S.</title>
   </head>
+
   <body>
     <div class="page">
+      <!--Header-->
+
       <header class="header">
         <h1 class="header-title">
           Around<span class="header-title__complement">the U.S.</span>
@@ -25,6 +28,8 @@
         <hr class="header__divider" />
       </header>
       <main>
+        <!--Header Information-->
+
         <section class="profile-header-information">
           <div class="profile-header-container">
             <img
@@ -37,12 +42,17 @@
                 <h2 class="profile-header-name">
                   <span class="span-profile-name">Jacques Cousteau</span>
                 </h2>
+
+                <!--Profile Button-->
+
                 <button class="profile-name-edit-button"></button>
               </div>
               <p class="profile-header-occupation">
                 <span class="span-profile-about">Explorer</span>
               </p>
-              <!--MODAL-->
+
+              <!--Modal Sprint 7-->
+
               <div class="profile-popup-container">
                 <div class="profile-content-wrapper">
                   <button class="profile-popup-close-button outside">
@@ -57,7 +67,7 @@
                     <div class="profile-popup-header">
                       <h2 class="profile-popup-title">Editar perfil</h2>
                     </div>
-                    <form class="profile-form">
+                    <form class="profile-form" id="profileEditForm">
                       <div class="profile-form-group no-margin">
                         <input
                           class="profile-name-input"
@@ -79,85 +89,86 @@
                   </div>
                 </div>
               </div>
-              <!--MODAL-->
             </div>
-            <button class="profile-add-button"></button>
+
+            <!--Add Button-->
+
+            <button class="profile-add-button" id="profileAddButton"></button>
           </div>
         </section>
-        <section class="profile-gallery">
-          <div class="profile-gallery-container">
-            <div class="profile-gallery-card">
-              <img
-                src="./images/1ValleYosemite.jpg"
-                alt="Gallery Image 1"
-                class="profile-gallery__image"
-              />
-              <div class="profile-gallery-card__info">
-                <h3 class="profile-gallery-card__title">Valle de Yosemite</h3>
-                <button class="profile-like-button"></button>
+
+        <!--Modal Sprint 8-->
+
+        <div class="gallery-popup-container">
+          <div class="gallery-content-wrapper">
+            <button class="gallery-popup-close-button outside">
+              <svg viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+                />
+              </svg>
+            </button>
+            <div class="gallery-content">
+              <div class="gallery-popup-header">
+                <h2 class="gallery-popup-title">Nuevo Lugar</h2>
               </div>
-            </div>
-            <div class="profile-gallery-card">
-              <img
-                src="./images/2LagoLouise.png"
-                alt="Gallery Image 2"
-                class="profile-gallery__image"
-              />
-              <div class="profile-gallery-card__info">
-                <h3 class="profile-gallery-card__title">Lago Louise</h3>
-                <button class="profile-like-button"></button>
-              </div>
-            </div>
-            <div class="profile-gallery-card">
-              <img
-                src="./images/3MontanasCalvas.png"
-                alt="Gallery Image 3"
-                class="profile-gallery__image"
-              />
-              <div class="profile-gallery-card__info">
-                <h3 class="profile-gallery-card__title">Montañas Calvas</h3>
-                <button class="profile-like-button"></button>
-              </div>
-            </div>
-            <div class="profile-gallery-card">
-              <img
-                src="./images/4Latemar.png"
-                alt="Gallery Image 4"
-                class="profile-gallery__image"
-              />
-              <div class="profile-gallery-card__info">
-                <h3 class="profile-gallery-card__title">Latemar</h3>
-                <button class="profile-like-button"></button>
-              </div>
-            </div>
-            <div class="profile-gallery-card">
-              <img
-                src="./images/5VanoisNational.png"
-                alt="Gallery Image 5"
-                class="profile-gallery__image"
-              />
-              <div class="profile-gallery-card__info">
-                <h3 class="profile-gallery-card__title">Vanoise National</h3>
-                <button class="profile-like-button"></button>
-              </div>
-            </div>
-            <div class="profile-gallery-card">
-              <img
-                src="./images/6LagoDiBraies.png"
-                alt="Gallery Image 6"
-                class="profile-gallery__image"
-              />
-              <div class="profile-gallery-card__info">
-                <h3 class="profile-gallery-card__title">Lago di Braies</h3>
-                <button class="profile-like-button"></button>
-              </div>
+              <form class="gallery-form" id="galleryAddForm">
+                <div class="gallery-form-group no-margin">
+                  <input
+                    class="gallery-title-image-input"
+                    type="text"
+                    placeholder="Titulo"
+                  />
+                </div>
+                <div class="gallery-form-group no-margin">
+                  <input
+                    class="gallery-link-input"
+                    type="text"
+                    placeholder="Enlace a la imagen"
+                  />
+                </div>
+                <button type="submit" class="gallery-create-button">
+                  Crear
+                </button>
+              </form>
             </div>
           </div>
+        </div>
+
+        <!--Gallery Section-->
+
+        <section class="profile-gallery" id="profileGallery">
+          <div class="profile-gallery-container"></div>
         </section>
+
+        <!--Template-->
+
+        <template id="profileGalleryTemplate">
+          <div class="profile-gallery-card">
+            <button class="profile-gallery-remove-card-button">🗑</button>
+            <img src="" alt="" class="profile-gallery__image" />
+            <div class="profile-gallery-card__info">
+              <h3 class="profile-gallery-card__title"></h3>
+              <button class="profile-like-button"></button>
+            </div>
+          </div>
+        </template>
         <section class="profile-footer">
           <h3 class="profile-footer-text">&copy; 2025 Dieval</h3>
         </section>
       </main>
+    </div>
+    <div class="popup-image">
+      <img id="popup-img" src="" class="popup-image-container" />
+      <button class="popup-image-close-button outside">
+        <svg viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+          />
+        </svg>
+      </button>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
