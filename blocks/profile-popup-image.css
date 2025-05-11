@@ -51,7 +51,6 @@
 }
 
 .profile-gallery__image:hover {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
 }
 
 @media screen and (max-width: 1024px) {
@@ -108,7 +107,6 @@
   }
 
   .profile-gallery__image:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
   }
 }
 
@@ -166,7 +164,6 @@
   }
 
   .profile-gallery__image:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
   }
 }
 
@@ -224,7 +221,6 @@
   }
 
   .profile-gallery__image:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
   }
 }
 
@@ -282,7 +278,6 @@
   }
 
   .profile-gallery__image:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
   }
 }
 
@@ -340,6 +335,5 @@
   }
 
   .profile-gallery__image:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
   }
 }
