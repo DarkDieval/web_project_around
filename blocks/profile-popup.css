@@ -490,24 +490,6 @@
     transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
   }
 
-  /* Nuevo CSS para el botón de Me gusta */
-  .profile-like-button {
-    width: 21px;
-    height: 19px;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    background-image: url("/images/LikeButton.png"); /* Corazón original */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding: 0;
-  }
-
-  .profile-like-button.like-button-active {
-    background-image: url("/images/LikeButtonClic.png"); /* Corazón relleno */
-  }
   .profile-popup-close-button.outside svg {
     width: 26px; /* Ajustamos el tamaño del SVG dentro del botón */
     height: 26px;
