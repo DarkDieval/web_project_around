@@ -73,16 +73,39 @@
                           class="profile-name-input"
                           type="text"
                           placeholder="Nombre"
+                          name="name"
+                          id="name"
+                          required
+                          minlength="2"
+                          maxlength="40"
                         />
+                        <span
+                          class="profile-input-error"
+                          id="name-error"
+                        ></span>
                       </div>
                       <div class="profile-form-group no-margin">
                         <input
                           class="profile-about-input"
                           type="text"
                           placeholder="Acerca de mi"
+                          name="about"
+                          id="about"
+                          required
+                          minlength="2"
+                          maxlength="200"
                         />
+                        <span
+                          class="profile-input-error"
+                          id="about-error"
+                        ></span>
                       </div>
-                      <button type="submit" class="profile-save-button">
+                      <button
+                        type="submit"
+                        class="profile-save-button button_disabled"
+                        id="profileSubmitButton"
+                        disabled
+                      >
                         Guardar
                       </button>
                     </form>
@@ -119,16 +142,31 @@
                     class="gallery-title-image-input"
                     type="text"
                     placeholder="Titulo"
+                    name="title"
+                    id="title"
+                    required
+                    minlength="2"
+                    maxlength="30"
                   />
+                  <span class="gallery-input-error" id="title-error"></span>
                 </div>
                 <div class="gallery-form-group no-margin">
                   <input
                     class="gallery-link-input"
-                    type="text"
+                    type="url"
                     placeholder="Enlace a la imagen"
+                    name="link"
+                    id="link"
+                    required
                   />
+                  <span class="gallery-input-error" id="link-error"></span>
                 </div>
-                <button type="submit" class="gallery-create-button">
+                <button
+                  type="submit"
+                  class="gallery-create-button button_disabled"
+                  id="gallerySubmitButton"
+                  disabled
+                >
                   Crear
                 </button>
               </form>

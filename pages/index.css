@@ -9,3 +9,40 @@
 @import url("../blocks/profile-popup.css");
 @import url("../blocks/profile-form.css");
 @import url("../blocks/profile-footer.css");
+
+/* --- Estilos para la validación de formularios --- */
+
+/* Clase para inputs cuando tienen un error (se aplica al propio input) */
+.input_type_error {
+  border-bottom: 1px solid red; /* O el estilo que prefieras para indicar el error */
+  /* Puedes añadir otros estilos como un color de fondo ligero, un shadow, etc. */
+}
+
+/* Estilos básicos para los spans de error (ocultos por defecto) */
+/* Asegúrate de que tus clases específicas de span, como .profile-input-error y .gallery-input-error, también hereden o tengan estos estilos */
+.profile-input-error,
+.gallery-input-error {
+  color: red; /* Color del texto del mensaje de error */
+  font-size: 12px; /* Tamaño de fuente más pequeño para el mensaje */
+  line-height: 1.2; /* Espaciado entre líneas si el mensaje es largo */
+  margin-top: 5px; /* Pequeño margen superior para separar del input */
+  min-height: 14px; /* Asegura un espacio mínimo para el mensaje incluso si está vacío */
+  display: none; /* ¡Importante! Oculta el span por defecto */
+  /* Puedes ajustar el padding o margin-bottom si lo necesitas */
+}
+
+/* Clase para hacer visible el mensaje de error (se añade al span cuando hay error) */
+.error_visible {
+  display: block; /* Muestra el span de error */
+}
+
+/* Clase para el botón de submit cuando está deshabilitado */
+.button_disabled {
+  opacity: 0.5; /* Hace que el botón se vea atenuado */
+  cursor: not-allowed; /* Cambia el cursor para indicar que no es clicable */
+  /* También puedes ajustar el color de fondo o el texto si lo deseas */
+  background-color: #cccccc; /* Un gris claro para el botón deshabilitado */
+  color: #666666; /* Un color de texto más suave */
+}
+
+/* --- Fin de Estilos para la validación --- */
