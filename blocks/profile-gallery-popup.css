@@ -87,7 +87,7 @@
 }
 
 .gallery-form {
-  padding: 20px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -108,14 +108,17 @@
 }
 
 .gallery-title-image-input {
-  margin-bottom: 29.74px;
+  margin-bottom: 30px;
 }
 
 .gallery-link-input {
-  margin-bottom: 48px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-.gallery-form input[type="text"] {
+/* MODIFICACIÓN AQUÍ: APLICAR ESTILOS A input[type="text"] Y input[type="url"] */
+.gallery-form input[type="text"],
+.gallery-form input[type="url"] {
   width: 354px;
   border: none;
   border-bottom: 1px solid #c4c4c4;
@@ -126,7 +129,8 @@
   margin-left: 10px;
 }
 
-.gallery-form input[type="text"]::placeholder {
+.gallery-form input[type="text"]::placeholder,
+.gallery-form input[type="url"]::placeholder {
   color: #c4c4c4;
 }
 
@@ -245,6 +249,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
 
   .gallery-form-group {
@@ -263,15 +268,16 @@
   }
 
   .gallery-title-image-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .gallery-link-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
-  .gallery-form input[type="text"] {
+  .gallery-form input[type="text"],
+  .gallery-form input[type="url"] {
     width: 238px;
     height: 26px;
     border: none;
@@ -283,7 +289,8 @@
     margin-left: 0px;
   }
 
-  .gallery-form input[type="text"]::placeholder {
+  .gallery-form input[type="text"]::placeholder,
+  .gallery-form input[type="url"]::placeholder {
     color: #c4c4c4;
   }
 
@@ -404,6 +411,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
 
   .gallery-form-group {
@@ -422,15 +430,16 @@
   }
 
   .gallery-title-image-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .gallery-link-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
-  .gallery-form input[type="text"] {
+  .gallery-form input[type="text"],
+  .gallery-form input[type="url"] {
     width: 238px;
     height: 26px;
     border: none;
@@ -442,7 +451,8 @@
     margin-left: 0px;
   }
 
-  .gallery-form input[type="text"]::placeholder {
+  .gallery-form input[type="text"]::placeholder,
+  .gallery-form input[type="url"]::placeholder {
     color: #c4c4c4;
   }
 
@@ -563,6 +573,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
 
   .gallery-form-group {
@@ -581,15 +592,16 @@
   }
 
   .gallery-title-image-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .gallery-link-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
-  .gallery-form input[type="text"] {
+  .gallery-form input[type="text"],
+  .gallery-form input[type="url"] {
     width: 238px;
     height: 26px;
     border: none;
@@ -601,7 +613,8 @@
     margin-left: 0px;
   }
 
-  .gallery-form input[type="text"]::placeholder {
+  .gallery-form input[type="text"]::placeholder,
+  .gallery-form input[type="url"]::placeholder {
     color: #c4c4c4;
   }
 
@@ -722,6 +735,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
 
   .gallery-form-group {
@@ -740,15 +754,16 @@
   }
 
   .gallery-title-image-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .gallery-link-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
-  .gallery-form input[type="text"] {
+  .gallery-form input[type="text"],
+  .gallery-form input[type="url"] {
     width: 238px;
     height: 26px;
     border: none;
@@ -760,7 +775,8 @@
     margin-left: 0px;
   }
 
-  .gallery-form input[type="text"]::placeholder {
+  .gallery-form input[type="text"]::placeholder,
+  .gallery-form input[type="url"]::placeholder {
     color: #c4c4c4;
   }
 
@@ -776,7 +792,6 @@
     width: 238px;
     text-align: center;
     margin-top: 10px;
-    margin-left: 10px;
     margin-left: 0px;
   }
 
@@ -881,6 +896,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
 
   .gallery-form-group {
@@ -899,15 +915,16 @@
   }
 
   .gallery-title-image-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .gallery-link-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
-  .gallery-form input[type="text"] {
+  .gallery-form input[type="text"],
+  .gallery-form input[type="url"] {
     width: 238px;
     height: 26px;
     border: none;
@@ -919,7 +936,8 @@
     margin-left: 0px;
   }
 
-  .gallery-form input[type="text"]::placeholder {
+  .gallery-form input[type="text"]::placeholder,
+  .gallery-form input[type="url"]::placeholder {
     color: #c4c4c4;
   }
 
@@ -935,7 +953,6 @@
     width: 238px;
     text-align: center;
     margin-top: 10px;
-    margin-left: 10px;
     margin-left: 0px;
   }
 

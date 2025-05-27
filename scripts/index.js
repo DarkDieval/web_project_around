@@ -1,4 +1,8 @@
-import { enableValidation } from "../scripts/validate";
+////Sprint 9 - Funcion de validacion
+
+// Importa la función de validación desde validate.js
+// Asegúrate de importar también hideError y toggleButtonState si se usan directamente
+import { enableValidation, hideError, toggleButtonState } from "./validate.js";
 
 //// Sprint 8 - Array
 
@@ -44,10 +48,17 @@ const initialCards = [
 
 //Botones
 const buttonEdit = document.querySelector(".profile-name-edit-button");
-const buttonClose = document.querySelector(".profile-popup-close-button");
+// Seleccionamos el botón de cerrar del popup de perfil de forma más específica
+const buttonCloseProfilePopup = document.querySelector(
+  ".profile-popup-close-button.outside"
+);
 
 //Popup
 const profilePopup = document.querySelector(".profile-popup-container");
+// El contenedor del contenido del popup de perfil (para stopPropagation)
+const profileContentWrapper = profilePopup.querySelector(
+  ".profile-content-wrapper"
+);
 
 //Form
 const profileEditForm = document.querySelector("#profileEditForm"); // ID de formulario correcto
@@ -58,49 +69,66 @@ const spanAbout = document.querySelector(".span-profile-about");
 
 //// Sprint 7 - 2 - Cear funcionalidad u/o manipulación
 
-// Popup
+// Popup de Perfil
 function openPopup() {
   profilePopup.classList.add("active");
+  // Al abrir el popup, resetea la validación y llena los campos con el texto actual del perfil
+  const inputs = Array.from(
+    profileEditForm.querySelectorAll(
+      ".profile-name-input, .profile-about-input"
+    )
+  );
+  const button = profileEditForm.querySelector(".profile-save-button");
+
+  // Oculta todos los errores y limpia los mensajes
+  inputs.forEach((input) =>
+    hideError(input, {
+      inputErrorClass: "input_type_error",
+      errorClass: "error_visible",
+    })
+  );
+
+  // Actualiza el estado del botón basado en la validez actual (que debería ser válida si no hay errores)
+  toggleButtonState(inputs, button, { inactiveButtonClass: "button_disabled" });
+
+  // Llena los inputs del formulario con el contenido actual del perfil
+  inputName.value = spanName.textContent;
+  inputAbout.value = spanAbout.textContent;
 }
 
 function closePopup() {
   profilePopup.classList.remove("active");
-  inputName.value = "";
-  inputAbout.value = "";
+  // Los valores de los inputs no se limpian al cerrar, solo al resetear el formulario o al abrirlo
 }
 
 function handleSubmitProfile(event) {
-  // Combinado handleSubmit
+  event.preventDefault(); // Previene el envío por defecto
 
-  event.preventDefault();
+  // Actualiza el contenido de los spans del perfil con los valores del formulario
+  spanName.textContent = inputName.value;
+  spanAbout.textContent = inputAbout.value;
 
-  const name = inputName.value;
-  const about = inputAbout.value;
-
-  if (name.trim() === "") {
-    spanName.textContent = "Insert Name";
-  } else {
-    spanName.textContent = name;
-  }
-
-  if (about.trim() === "") {
-    spanAbout.textContent = "Insert Activity";
-  } else {
-    spanAbout.textContent = about;
-  }
-
-  closePopup();
-  profileEditForm.reset();
+  closePopup(); // Cierra el popup
+  // profileEditForm.reset(); // No es necesario resetear aquí si los valores ya se actualizaron
 }
 
 //// Sprint 7 - 3 - Trabajar con eventos
 
 // Apertura y cierre del Popup de edicion de nombre
 buttonEdit.addEventListener("click", openPopup);
-buttonClose.addEventListener("click", closePopup);
+buttonCloseProfilePopup.addEventListener("click", closePopup); // Usar la constante corregida
 
-//Form
-profileEditForm.addEventListener("submit", handleSubmitProfile); // Un solo listener
+//Formulario de Perfil
+profileEditForm.addEventListener("submit", handleSubmitProfile);
+
+// Importante: Detener la propagación de clics dentro del contenido del popup de perfil
+// Esto evita que un clic en la tarjeta blanca se propague al fondo y cierre el popup.
+if (profileContentWrapper) {
+  // Asegúrate de que el contenedor exista
+  profileContentWrapper.addEventListener("click", (event) => {
+    event.stopPropagation(); // ¡Esto es crucial!
+  });
+}
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
@@ -125,17 +153,25 @@ const profileGalleryContainer = document.querySelector(
 
 //Popup
 const galleryPopup = document.querySelector(".gallery-popup-container");
+// El contenedor del contenido del popup de galería (para stopPropagation)
+const galleryContentWrapper = galleryPopup.querySelector(
+  ".gallery-content-wrapper"
+);
 
 //Forms
 const galleryAddForm = document.querySelector("#galleryAddForm"); // ID de formulario correcto
 const galleryTitleImage = document.querySelector(".gallery-title-image-input");
 const galleryLink = document.querySelector(".gallery-link-input");
 
-// Elementos del popup de imagen
+// Elementos del popup de imagen grande
 const popupImageElement = document.querySelector(".popup-image");
 const popupImageImg = popupImageElement.querySelector("img");
 const popupImageClose = popupImageElement.querySelector(
   ".popup-image-close-button"
+);
+// El contenedor de la imagen dentro del popup de imagen grande (para stopPropagation)
+const popupImageContainer = popupImageElement.querySelector(
+  ".popup-image-container"
 );
 
 //// Sprint 8 - 2 - Cear funcionalidad u/o manipulación
@@ -168,56 +204,73 @@ function createGalleryCard(gallery) {
   profileGalleryCardTitle.textContent = gallery.name; // Usamos gallery.name
   profileGalleryImage.alt = gallery.name; // Usamos gallery.name
   profileGalleryImage.src = gallery.link; // Usamos gallery.link
+
+  // Evento para eliminar la tarjeta
   profileGalleryRemoveCardButton.addEventListener("click", () => {
     containerGalleryClone.remove();
   });
 
-  // Agregamos el evento de click a la imagen para abrir el popup
+  // Agregamos el evento de click a la imagen para abrir el popup de imagen grande
   profileGalleryImage.addEventListener("click", () => {
     popupImageImg.src = gallery.link; // Establecemos la fuente de la imagen en el popup
+    popupImageImg.alt = gallery.name; // Establecemos el alt de la imagen
     popupImageElement.style.display = "flex"; // Mostramos el popup
   });
 
   // Agregamos el event listener al botón de like
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("like-button-active"); // Agregamos o quitamos la clase
+  likeButton.addEventListener("click", (event) => {
+    // Añadir event como parámetro
+    event.target.classList.toggle("like-button-active"); // Usar event.target para alternar la clase en el botón clickeado
   });
 
   return containerGalleryClone;
 }
 
-// Funcion de apertura y cierre de popup
+// Funcion de apertura y cierre de popup de Galería
 function openPopupGallery() {
   galleryPopup.classList.add("active");
+  // Al abrir el popup, resetea el formulario y la validación
+  galleryAddForm.reset(); // Resetea los campos del formulario
+  const inputs = Array.from(
+    galleryAddForm.querySelectorAll(
+      ".gallery-title-image-input, .gallery-link-input"
+    )
+  );
+  const button = galleryAddForm.querySelector(".gallery-create-button");
+  inputs.forEach((input) =>
+    hideError(input, {
+      inputErrorClass: "input_type_error",
+      errorClass: "error_visible",
+    })
+  );
+  toggleButtonState(inputs, button, { inactiveButtonClass: "button_disabled" });
 }
 
 function closePopupGallery() {
   galleryPopup.classList.remove("active");
-  galleryTitleImage.value = "";
-  galleryLink.value = "";
+  // Los valores de los inputs no se limpian al cerrar, solo al resetear el formulario o al abrirlo
 }
 
 // Funcion forEach que carga el arreglo de las tarjetas
 function renderGallery() {
   initialCards.forEach((gallery) => {
     const cloneGallery = createGalleryCard(gallery);
-
-    profileGalleryContainer.appendChild(cloneGallery); // Añade al inicio con prepend
+    profileGalleryContainer.appendChild(cloneGallery); // Añade al final
   });
 }
 
-// Llamado de la función renderGallery
+// Llamado de la función renderGallery para cargar las tarjetas iniciales
 renderGallery();
 
-//Funcion del form
+//Funcion del formulario para añadir nueva imagen
 function handleSubmitAddImage(event) {
   event.preventDefault();
 
   console.log(galleryTitleImage.value, galleryLink.value); // Verifica los valores
 
   const newPicture = {
-    name: galleryTitleImage.value, // Cambiado a "name"
-    link: galleryLink.value, // Cambiado a "link"
+    name: galleryTitleImage.value,
+    link: galleryLink.value,
   };
 
   console.log(newPicture); // Verifica el objeto creado
@@ -228,49 +281,60 @@ function handleSubmitAddImage(event) {
 
   profileGalleryContainer.prepend(cloneImage); // Usar prepend para agregar al inicio
   closePopupGallery();
-  galleryAddForm.reset();
+  // galleryAddForm.reset(); // Resetting is now handled in openPopupGallery
 }
 
 //// Sprint 8 - 3 - Trabajar con eventos
 
-//Apertura y Cierre de Popup para agregar una imagen
+//Apertura y Cierre de Popup para agregar una imagen (galería)
 profileAddButton.addEventListener("click", openPopupGallery);
 buttonCloseGallery.addEventListener("click", closePopupGallery);
 
-// Form
+// Formulario de Galería
 galleryAddForm.addEventListener("submit", handleSubmitAddImage);
 
-// Evento para cerrar el popup de la imagen al hacer clic en la x
+// Importante: Detener la propagación de clics dentro del contenido del popup de galería
+if (galleryContentWrapper) {
+  // Asegúrate de que el contenedor exista
+  galleryContentWrapper.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+}
+
+// Evento para cerrar el popup de la imagen grande al hacer clic en la x
 popupImageClose.addEventListener("click", () => {
   popupImageElement.style.display = "none"; // Ocultamos el popup
 });
 
-// Evento para cerrar el popup de la imagen al hacer clic fuera de la imagen
+// Evento para cerrar el popup de la imagen grande al hacer clic fuera de la imagen (en el fondo)
 popupImageElement.addEventListener("click", (event) => {
   if (event.target === popupImageElement) {
-    popupImageElement.style.display = "none";
-    closePopupImage();
+    popupImageElement.style.display = "none"; // Solo esto es necesario para cerrar
+    // closePopupImage(); // <--- ELIMINADA ESTA LÍNEA QUE CAUSABA EL ERROR
   }
 });
 
+// Importante: Detener la propagación de clics dentro de la imagen del popup grande
+if (popupImageContainer) {
+  // Asegúrate de que el contenedor exista
+  popupImageContainer.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
-//// Sprint 9 - 1 - Seleccionar el elementos del DOM
+//// Eventos de cierre de popups generales
 
-//// Sprint 9 - 2 - Cear funcionalidad u/o manipulación
-
-//// Sprint 9 - 3 - Trabajar con eventos
-
-// Evento para cerrar el popup de la imagen al hacer clic fuera del popoup de editar perfil
+// Evento para cerrar el popup de perfil al hacer clic fuera del popup (en el fondo)
 profilePopup.addEventListener("click", (event) => {
   if (event.target === profilePopup) {
-    // Antes: profilePopup.style.display = "none"; // ESTO CAUSABA EL PROBLEMA
-    closePopup(); // **¡AHORA LLAMAMOS A LA FUNCIÓN CONSISTENTE closePopup()!**
+    closePopup(); // Llama a la función consistente closePopup()
   }
 });
 
-// Evento para cerrar el popup de la imagen al hacer clic fuera del popoup de editar perfil
+// Evento para cerrar el popup de galería al hacer clic fuera del popup (en el fondo)
 galleryPopup.addEventListener("click", (event) => {
   if (event.target === galleryPopup) {
     closePopupGallery();
@@ -278,7 +342,6 @@ galleryPopup.addEventListener("click", (event) => {
 });
 
 // Evento para cerrar los popups con la tecla ESC
-
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     // Cierra el popup de Perfil si está abierto
@@ -292,7 +355,18 @@ document.addEventListener("keydown", (event) => {
     // Cierra el popup de Imagen grande si está abierto
     // Este popup usa style.display, así que lo comprobamos de esa manera
     if (popupImageElement.style.display !== "none") {
-      popupImageElement.style.display = "none"; // O podrías crear una función closePopupImage() si lo prefieres
+      popupImageElement.style.display = "none";
     }
   }
+});
+
+// Habilitar la validación de formularios una vez que todos los elementos estén disponibles
+enableValidation({
+  formSelector: "#profileEditForm, #galleryAddForm",
+  inputSelector:
+    ".profile-name-input, .profile-about-input, .gallery-title-image-input, .gallery-link-input",
+  submitButtonSelector: ".profile-save-button, .gallery-create-button",
+  inactiveButtonClass: "button_disabled",
+  inputErrorClass: "input_type_error",
+  errorClass: "error_visible",
 });

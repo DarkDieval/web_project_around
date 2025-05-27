@@ -1,11 +1,12 @@
 .profile-form {
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 
 .profile-form-group {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-form-group.no-margin {
@@ -13,18 +14,20 @@
 }
 
 .profile-form-group p {
-  display: none; /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
+  display: none;
+  /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
   font-size: 0.9em;
   color: #555;
   margin-bottom: 3px;
 }
 
 .profile-name-input {
-  margin-bottom: 29.74px;
+  margin-bottom: 30px;
 }
 
 .profile-about-input {
-  margin-bottom: 48px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .profile-form input[type="text"] {
@@ -58,8 +61,10 @@
 }
 
 .profile-save-button:hover {
-  background-color: #545454; /* Color de fondo al pasar el mouse */
-  color: #fff; /* Puedes mantener el color del texto blanco o cambiarlo */
+  background-color: #545454;
+  /* Color de fondo al pasar el mouse */
+  color: #fff;
+  /* Puedes mantener el color del texto blanco o cambiarlo */
 }
 
 @media screen and (max-width: 1024px) {
@@ -68,26 +73,25 @@
     flex-direction: column;
   }
 
-  .profile-form-group {
-  }
+  .profile-form-group {}
 
-  .profile-form-group.no-margin {
-  }
+  .profile-form-group.no-margin {}
 
   .profile-form-group p {
-    display: none; /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
+    display: none;
+    /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
     font-size: 0.8em;
     color: #555;
     margin-bottom: 2px;
   }
 
   .profile-name-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .profile-about-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
   .profile-form input[type="text"] {
@@ -110,21 +114,25 @@
   .profile-save-button {
     background-color: #000;
     color: #fff;
-    padding: 10px 15px; /* Reducir el padding */
+    padding: 10px 15px;
+    /* Reducir el padding */
     border: none;
     border-radius: 4px;
     font-size: 0.9em;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 238px;
     text-align: center;
-    margin-top: 8px; /* Reducir el margen */
+    margin-top: 8px;
+    /* Reducir el margen */
     margin-left: 0;
   }
 
   .profile-save-button:hover {
-    background-color: #545454; /* Color de fondo al pasar el mouse */
-    color: #fff; /* Puedes mantener el color del texto blanco o cambiarlo */
+    background-color: #545454;
+    /* Color de fondo al pasar el mouse */
+    color: #fff;
+    /* Puedes mantener el color del texto blanco o cambiarlo */
   }
 }
 
@@ -134,26 +142,25 @@
     flex-direction: column;
   }
 
-  .profile-form-group {
-  }
+  .profile-form-group {}
 
-  .profile-form-group.no-margin {
-  }
+  .profile-form-group.no-margin {}
 
   .profile-form-group p {
-    display: none; /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
+    display: none;
+    /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
     font-size: 0.8em;
     color: #555;
     margin-bottom: 2px;
   }
 
   .profile-name-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .profile-about-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
   .profile-form input[type="text"] {
@@ -176,21 +183,25 @@
   .profile-save-button {
     background-color: #000;
     color: #fff;
-    padding: 10px 15px; /* Reducir el padding */
+    padding: 10px 15px;
+    /* Reducir el padding */
     border: none;
     border-radius: 4px;
     font-size: 0.9em;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 238px;
     text-align: center;
-    margin-top: 8px; /* Reducir el margen */
+    margin-top: 8px;
+    /* Reducir el margen */
     margin-left: 0;
   }
 
   .profile-save-button:hover {
-    background-color: #545454; /* Color de fondo al pasar el mouse */
-    color: #fff; /* Puedes mantener el color del texto blanco o cambiarlo */
+    background-color: #545454;
+    /* Color de fondo al pasar el mouse */
+    color: #fff;
+    /* Puedes mantener el color del texto blanco o cambiarlo */
   }
 }
 
@@ -200,26 +211,25 @@
     flex-direction: column;
   }
 
-  .profile-form-group {
-  }
+  .profile-form-group {}
 
-  .profile-form-group.no-margin {
-  }
+  .profile-form-group.no-margin {}
 
   .profile-form-group p {
-    display: none; /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
+    display: none;
+    /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
     font-size: 0.8em;
     color: #555;
     margin-bottom: 2px;
   }
 
   .profile-name-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .profile-about-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
   .profile-form input[type="text"] {
@@ -241,20 +251,24 @@
   .profile-save-button {
     background-color: #000;
     color: #fff;
-    padding: 10px 15px; /* Reducir el padding */
+    padding: 10px 15px;
+    /* Reducir el padding */
     border: none;
     border-radius: 4px;
     font-size: 0.9em;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 238px;
     text-align: center;
-    margin-top: 8px; /* Reducir el margen */
+    margin-top: 8px;
+    /* Reducir el margen */
   }
 
   .profile-save-button:hover {
-    background-color: #545454; /* Color de fondo al pasar el mouse */
-    color: #fff; /* Puedes mantener el color del texto blanco o cambiarlo */
+    background-color: #545454;
+    /* Color de fondo al pasar el mouse */
+    color: #fff;
+    /* Puedes mantener el color del texto blanco o cambiarlo */
   }
 }
 
@@ -264,26 +278,25 @@
     flex-direction: column;
   }
 
-  .profile-form-group {
-  }
+  .profile-form-group {}
 
-  .profile-form-group.no-margin {
-  }
+  .profile-form-group.no-margin {}
 
   .profile-form-group p {
-    display: none; /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
+    display: none;
+    /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
     font-size: 0.8em;
     color: #555;
     margin-bottom: 2px;
   }
 
   .profile-name-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .profile-about-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
   .profile-form input[type="text"] {
@@ -305,20 +318,24 @@
   .profile-save-button {
     background-color: #000;
     color: #fff;
-    padding: 10px 15px; /* Reducir el padding */
+    padding: 10px 15px;
+    /* Reducir el padding */
     border: none;
     border-radius: 4px;
     font-size: 0.9em;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 238px;
     text-align: center;
-    margin-top: 8px; /* Reducir el margen */
+    margin-top: 8px;
+    /* Reducir el margen */
   }
 
   .profile-save-button:hover {
-    background-color: #545454; /* Color de fondo al pasar el mouse */
-    color: #fff; /* Puedes mantener el color del texto blanco o cambiarlo */
+    background-color: #545454;
+    /* Color de fondo al pasar el mouse */
+    color: #fff;
+    /* Puedes mantener el color del texto blanco o cambiarlo */
   }
 }
 
@@ -328,26 +345,25 @@
     flex-direction: column;
   }
 
-  .profile-form-group {
-  }
+  .profile-form-group {}
 
-  .profile-form-group.no-margin {
-  }
+  .profile-form-group.no-margin {}
 
   .profile-form-group p {
-    display: none; /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
+    display: none;
+    /* O color: #C4C4C4; si prefieres mantenerlas visualmente */
     font-size: 0.8em;
     color: #555;
     margin-bottom: 2px;
   }
 
   .profile-name-input {
-    margin-top: 26px;
     margin-bottom: 30px;
   }
 
   .profile-about-input {
-    margin-bottom: 46px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
   .profile-form input[type="text"] {
@@ -369,19 +385,23 @@
   .profile-save-button {
     background-color: #000;
     color: #fff;
-    padding: 10px 15px; /* Reducir el padding */
+    padding: 10px 15px;
+    /* Reducir el padding */
     border: none;
     border-radius: 4px;
     font-size: 0.9em;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 238px;
     text-align: center;
-    margin-top: 8px; /* Reducir el margen */
+    margin-top: 8px;
+    /* Reducir el margen */
   }
 
   .profile-save-button:hover {
-    background-color: #545454; /* Color de fondo al pasar el mouse */
-    color: #fff; /* Puedes mantener el color del texto blanco o cambiarlo */
+    background-color: #545454;
+    /* Color de fondo al pasar el mouse */
+    color: #fff;
+    /* Puedes mantener el color del texto blanco o cambiarlo */
   }
 }
