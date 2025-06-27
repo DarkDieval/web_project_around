@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Perfiles Interactivos para publicar fotos de vivencias personales"
+    />
+    <meta name="author" content="Dieval" />
+    <meta
+      name="keywords"
+      content="aroud, tripleten, jacques, cousteau, yosemite"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Around the U.S.</title>
+  </head>
+  <body>
+    <div class="page">
+      <!--Form Popup Image-->
+      <div class="popup" id="openImagePopup">
+        <!-- El contenedor interno también reutiliza popup__container y añade uno específico para la imagen -->
+        <div
+          class="popup__container popup__container_image"
+          id="imagePopupContainer"
+        >
+          <button class="popup__button popup__button_close" type="button">
+            &#x2715;
+          </button>
+          <img class="popup__image" src="#" alt="" />
+          <h3 class="popup__image-title"></h3>
+        </div>
+      </div>
+      <!--Form Popup Edit-->
+      <div class="popup" id="editProfilePopup">
+        <!-- Formulario del popup de edición de perfil -->
+        <form class="popup__container" id="formEdit" novalidate>
+          <button class="popup__button popup__button_close" type="button">
+            &#x2715;
+          </button>
+          <h2 class="popup__subtitle">Editar Perfil</h2>
+          <fieldset class="popup_content">
+            <label class="popup__field">
+              <input
+                type="text"
+                class="popup__input popup__input-name"
+                placeholder="Nombre"
+                minlength="2"
+                maxlength="40"
+                id="name-input"
+                required
+              />
+              <!-- VERIFICA ESTO: input id="name-input" -> span class="name-input-error" -->
+              <span class="popup__input-error name-input-error"></span>
+            </label>
+            <label class="popup__field">
+              <input
+                type="text"
+                class="popup__input popup__input-about"
+                placeholder="Acerca de mi"
+                minlength="2"
+                maxlength="200"
+                id="about-input"
+                required
+              />
+              <!-- VERIFICA ESTO: input id="about-input" -> span class="about-input-error" -->
+              <span class="popup__input-error about-input-error"></span>
+            </label>
+            <button type="submit" class="popup__button popup__button_save">
+              Guardar
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <!--Form Popup Add Image-->
+      <div class="popup" id="addImagePopup">
+        <!-- Formulario del popup de edición de imagen -->
+        <form class="popup__container" id="formAddImage" novalidate>
+          <button class="popup__button popup__button_close" type="button">
+            &#x2715;
+          </button>
+          <h2 class="popup__subtitle">Nuevo Lugar</h2>
+          <fieldset class="popup_content">
+            <label class="popup__field">
+              <input
+                type="text"
+                class="popup__input popup__input-image-name"
+                placeholder="Titulo"
+                minlength="2"
+                maxlength="40"
+                id="image-name-input"
+                required
+              />
+              <span class="popup__input-error image-name-input-error"></span>
+            </label>
+            <label class="popup__field">
+              <input
+                type="url"
+                class="popup__input popup__image-url"
+                placeholder="Enlace a la imagen"
+                minlength="2"
+                id="add-image-input"
+                required
+              />
+              <span class="popup__input-error add-image-input-error"></span>
+              <!-- CORREGIDO -->
+            </label>
+            <button type="submit" class="popup__button popup__button_save">
+              Crear
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <header>
+        <img
+          src="./images/Vector.png"
+          alt="Around the U.S. logo"
+          class="header"
+        />
+      </header>
+      <main>
+        <div class="main__profile-container">
+          <div class="main__profile-image-container">
+            <img
+              class="main__profile-image"
+              src="./images/JacquesCousteau.jpg"
+              alt="Around the U.S. logo"
+            />
+          </div>
+          <div class="main__profile-info-container">
+            <p class="main__paragraph main__paragraph-name">Jacques Cousteau</p>
+            <p class="main__paragraph main__paragraph-info">Explorer</p>
+            <button class="main__button main__button-edit" type="button">
+              🖋
+            </button>
+          </div>
+          <button class="main__button main__button-add">+</button>
+        </div>
+        <!-- Sección donde se insertarán las tarjetas -->
+        <section class="main__places">
+          <ul class="main__places__grid">
+            <!-- Las tarjetas se renderizarán aquí por JavaScript -->
+          </ul>
+        </section>
+      </main>
+      <!-- Template para las tarjetas, invisible en la página -->
+      <template id="main__card-template">
+        <li class="main__place-card">
+          <button
+            class="main__place-card__delete-button"
+            type="button"
+          ></button>
+          <img src="#" alt="" class="main__place-card__image" />
+          <div class="main__place-card__info">
+            <h2 class="main__place-card__title"></h2>
+            <button
+              class="main__place-card__like-button"
+              type="button"
+            ></button>
+          </div>
+        </li>
+      </template>
+      <p class="footer">&copy; 2025 Around the U.S.</p>
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>
