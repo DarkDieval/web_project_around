@@ -180,9 +180,6 @@
   max-width: 200px;
   /* Limita el ancho del título */
   font-family: "Inter-Black";
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 100%;
 }
 
 .main__place-card__like-button {
@@ -199,10 +196,6 @@
 
 .main__place-card__like-button_active {
   background-image: url("../images/LikeButtonClic.png");
-}
-
-.main__place-card__like-button:hover {
-  opacity: 0.8;
 }
 
 .main__place-card__like-button:hover {
@@ -359,7 +352,7 @@
   }
 
   .main__place-card__image {
-    width: 260px;
+    width: 100%;
   }
 }
 
@@ -424,7 +417,7 @@
   }
 
   .main__place-card__image {
-    width: 260px;
+    width: 100%;
   }
 }
 
@@ -489,6 +482,6 @@
   }
 
   .main__place-card__image {
-    width: 260px;
+    width: 100%;
   }
 }

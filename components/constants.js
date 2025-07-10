@@ -1,13 +1,12 @@
 export const validationConfig = {
-  formSelector: ".popup__container", // Selector para todos los formularios
-  inputSelector: ".popup__input", // Selector para todos los inputs
-  submitButtonSelector: ".popup__button_save", // Selector del botón de guardar/crear
-  inactiveButtonClass: "popup__button_save_disabled", // Clase para el botón deshabilitado
-  inputErrorClass: "popup__input_type_error", // Clase para el input con error visual
-  errorClass: "popup__input-error_active", // Clase para mostrar el mensaje de error
+  formSelector: ".popup__container",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button_save",
+  inactiveButtonClass: "popup__button_save_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__input-error_active",
 };
 
-// Arreglo de tarjetas iniciales (mantén esto aquí, o podrías tener un archivo `initial-cards.js`)
 export const initialCards = [
   {
     name: "Valle de Yosemite",
@@ -34,3 +33,19 @@ export const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
   },
 ];
+
+export const profileNameSelector = ".main__paragraph-name";
+export const profileJobSelector = ".main__paragraph-info";
+
+export const editProfilePopupSelector = "#editProfilePopup";
+export const addImagePopupSelector = "#addImagePopup";
+export const openImagePopupSelector = "#openImagePopup";
+
+export const popupImageSelector = ".popup__image";
+export const popupImageTitleSelector = ".popup__image-title";
+
+export const placesGridSelector = ".main__places__grid";
+export const cardTemplateSelector = "#main__card-template";
+
+export const editButtonSelector = ".main__button-edit";
+export const addButtonSelector = ".main__button-add";
