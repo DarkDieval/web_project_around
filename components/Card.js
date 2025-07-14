@@ -1,5 +1,3 @@
-// components/Card.js
-
 export default class Card {
   constructor(data, cardSelector, handleCardClick) {
     this._name = data.name;
@@ -11,7 +9,7 @@ export default class Card {
   _getTemplate() {
     const cardElement = document
       .querySelector(this._cardSelector)
-      .content.querySelector(".main__place-card")
+      .content.querySelector(".places__card") // Corregido: de .main__place-card a .places__card
       .cloneNode(true);
 
     return cardElement;
@@ -32,7 +30,7 @@ export default class Card {
   }
 
   _handleLikeClick() {
-    this._likeButton.classList.toggle("main__place-card__like-button_active");
+    this._likeButton.classList.toggle("places__card-like-button_active"); // Corregido: de main__place-card__like-button_active a places__card-like-button_active
   }
 
   _handleDeleteClick() {
@@ -43,13 +41,13 @@ export default class Card {
   generateCard() {
     this._element = this._getTemplate();
 
-    this._cardImage = this._element.querySelector(".main__place-card__image");
-    this._cardTitle = this._element.querySelector(".main__place-card__title");
+    this._cardImage = this._element.querySelector(".places__card-image"); // Corregido
+    this._cardTitle = this._element.querySelector(".places__card-title"); // Corregido
     this._likeButton = this._element.querySelector(
-      ".main__place-card__like-button"
+      ".places__card-like-button" // Corregido
     );
     this._deleteButton = this._element.querySelector(
-      ".main__place-card__delete-button"
+      ".places__card-delete-button" // Corregido
     );
 
     this._cardImage.src = this._link;

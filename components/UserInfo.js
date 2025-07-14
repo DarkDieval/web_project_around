@@ -1,5 +1,3 @@
-// components/UserInfo.js
-
 export default class UserInfo {
   constructor({ nameSelector, jobSelector }) {
     this._nameElement = document.querySelector(nameSelector);

@@ -1,27 +1,29 @@
-import FormValidator from "../components/FormValidator.js";
-import Card from "../components/Card.js";
-import Section from "../components/Section.js";
-import PopupWithImage from "../components/PopupWithImage.js";
-import PopupWithForm from "../components/PopupWithForm.js";
-import UserInfo from "../components/UserInfo.js";
+import FormValidator from "./FormValidator.js";
+import Card from "./Card.js";
+import Section from "./Section.js";
+import PopupWithImage from "./PopupWithImage.js";
+import PopupWithForm from "./PopupWithForm.js";
+import UserInfo from "./UserInfo.js";
 
-import { validationConfig, initialCards } from "./constants.js";
+import {
+  initialCards,
+  profileNameSelector,
+  profileJobSelector,
+  editProfilePopupSelector,
+  addImagePopupSelector,
+  openImagePopupSelector,
+  popupImageSelector,
+  popupImageTitleSelector,
+  placesGridSelector,
+  cardTemplateSelector,
+  editButtonSelector,
+  addButtonSelector,
+  editProfileValidationConfig,
+  addImageValidationConfig,
+} from "./constants.js";
 
-const editButton = document.querySelector(".main__button-edit");
-const addButton = document.querySelector(".main__button-add");
-
-const profileNameSelector = ".main__paragraph-name";
-const profileJobSelector = ".main__paragraph-info";
-
-const editProfilePopupSelector = "#editProfilePopup";
-const addImagePopupSelector = "#addImagePopup";
-const openImagePopupSelector = "#openImagePopup";
-
-const popupImageSelector = ".popup__image";
-const popupImageTitleSelector = ".popup__image-title";
-
-const placesGridSelector = ".main__places__grid";
-const cardTemplateSelector = "#main__card-template";
+const editButton = document.querySelector(editButtonSelector);
+const addButton = document.querySelector(addButtonSelector);
 
 const userInfo = new UserInfo({
   nameSelector: profileNameSelector,
@@ -71,17 +73,16 @@ const addImagePopup = new PopupWithForm(addImagePopupSelector, (formData) => {
     name: formData["image-name-input"],
     link: formData["add-image-input"],
   };
-  const newCardElement = createCard(newCardData);
-  cardListSection.setItem(newCardElement);
+  cardListSection.setItem(createCard(newCardData));
 });
 addImagePopup.setEventListeners();
 
 const editFormValidator = new FormValidator(
-  validationConfig,
+  editProfileValidationConfig,
   editProfilePopup._form
 );
 const addImageFormValidator = new FormValidator(
-  validationConfig,
+  addImageValidationConfig,
   addImagePopup._form
 );
 
@@ -89,11 +90,12 @@ editFormValidator.enableValidation();
 addImageFormValidator.enableValidation();
 
 editButton.addEventListener("click", () => {
+  console.log("Clic detectado en el botón de editar perfil.");
   const currentUserInfo = userInfo.getUserInfo();
-  editProfilePopup._form.querySelector("#name-input").value =
-    currentUserInfo.name;
-  editProfilePopup._form.querySelector("#about-input").value =
-    currentUserInfo.job;
+  editProfilePopup.setInputValues({
+    "name-input": currentUserInfo.name,
+    "about-input": currentUserInfo.job,
+  });
   editFormValidator.resetValidation();
   editProfilePopup.open();
 });

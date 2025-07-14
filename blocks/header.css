@@ -16,22 +16,28 @@
     box-sizing: border-box;
   }
 
+  /* La clase 'main' en CSS si no se usa en HTML como clase puede ser ambigua,
+     si se refiere al tag <main>, debe ser solo 'main'.
+     Asumo que aquí se refiere al tag <main> */
   .main {
     box-sizing: border-box;
   }
 
-  .main__profile-container {
+  /* Corregido de main__profile-container a profile */
+  .profile {
     box-sizing: border-box;
   }
 
-  .main__button-add {
+  /* Corregido de main__button-add a profile__button--add */
+  .profile__button--add {
     width: 120px;
     height: 45px;
     font-size: 20px;
     margin-left: 92px;
   }
 
-  .main__places__grid {
+  /* Corregido de main__places__grid a places__grid */
+  .places__grid {
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }

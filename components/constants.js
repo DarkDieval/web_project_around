@@ -1,10 +1,19 @@
-export const validationConfig = {
-  formSelector: ".popup__container",
+export const commonValidationConfig = {
   inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button_save",
-  inactiveButtonClass: "popup__button_save_disabled",
   inputErrorClass: "popup__input_type_error",
   errorClass: "popup__input-error_active",
+};
+
+export const editProfileValidationConfig = {
+  ...commonValidationConfig,
+  submitButtonSelector: ".popup__button_save",
+  inactiveButtonClass: "popup__button_disabled",
+};
+
+export const addImageValidationConfig = {
+  ...commonValidationConfig,
+  submitButtonSelector: ".popup__button_create",
+  inactiveButtonClass: "popup__button_disabled",
 };
 
 export const initialCards = [
@@ -34,8 +43,8 @@ export const initialCards = [
   },
 ];
 
-export const profileNameSelector = ".main__paragraph-name";
-export const profileJobSelector = ".main__paragraph-info";
+export const profileNameSelector = ".profile__name";
+export const profileJobSelector = ".profile__job";
 
 export const editProfilePopupSelector = "#editProfilePopup";
 export const addImagePopupSelector = "#addImagePopup";
@@ -44,8 +53,8 @@ export const openImagePopupSelector = "#openImagePopup";
 export const popupImageSelector = ".popup__image";
 export const popupImageTitleSelector = ".popup__image-title";
 
-export const placesGridSelector = ".main__places__grid";
+export const placesGridSelector = ".places__grid";
 export const cardTemplateSelector = "#main__card-template";
 
-export const editButtonSelector = ".main__button-edit";
-export const addButtonSelector = ".main__button-add";
+export const editButtonSelector = ".profile__button-edit";
+export const addButtonSelector = ".profile__button-add";

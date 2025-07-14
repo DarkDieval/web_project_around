@@ -1,11 +1,9 @@
-/*main*/
-
 .main {
   max-width: 880px;
   margin: auto;
 }
 
-.main__profile-container {
+.profile {
   max-width: 880px;
   width: 100%;
   display: grid;
@@ -14,20 +12,20 @@
   grid-gap: 30px;
 }
 
-.main__profile-image-container {
+.profile__image-container {
   max-width: 120px;
   width: 120px;
   display: flex;
 }
 
-.main__profile-image {
+.profile__image {
   width: 100%;
   height: 100%;
   border-radius: 100%;
   object-fit: cover;
 }
 
-.main__profile-info-container {
+.profile__info-container {
   display: grid;
   grid-column: 2 / 4;
   grid-template-columns: repeat(5, 1fr);
@@ -37,7 +35,7 @@
   line-height: normal;
 }
 
-.main__paragraph-name {
+.profile__name {
   grid-column: 1 / 4;
   margin: 0;
   font-weight: 500;
@@ -48,7 +46,7 @@
   white-space: nowrap;
 }
 
-.main__paragraph-info {
+.profile__job {
   grid-column: 1 / 5;
   grid-row: 2;
   margin: 0;
@@ -59,7 +57,7 @@
   margin-bottom: 15px;
 }
 
-.main__button {
+.profile__button {
   background-color: #000000;
   color: #ffffff;
   border: 2px solid;
@@ -69,11 +67,11 @@
   cursor: pointer;
 }
 
-.main__button:hover {
+.profile__button:hover {
   opacity: 0.6;
 }
 
-.main__button-edit {
+.profile__button-edit {
   width: 24px;
   height: 24px;
   font-size: 14px;
@@ -81,7 +79,7 @@
   margin-left: 300px;
 }
 
-.main__button-add {
+.profile__button-add {
   width: 150px;
   height: 50px;
   font-size: 24px;
@@ -89,55 +87,47 @@
   margin-left: 65px;
 }
 
-/* Estilos para la sección de las tarjetas */
-.main__places {
+.places {
   max-width: 880px;
   width: 100%;
   padding: 0;
   box-sizing: border-box;
   margin-top: 50px;
-  /* Espacio superior para separar del perfil */
   margin-bottom: 67px;
-  /* Espacio inferior para el pie de página futuro */
 }
 
-.main__places__grid {
+.places__grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
   gap: 17px;
-  /* Espacio entre las tarjetas */
   padding: 0;
   margin: 0;
 }
 
-/* Estilos de una tarjeta individual */
-.main__place-card {
+.places__card {
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  /* Asegura que la imagen no se desborde */
   position: relative;
   display: flex;
   flex-direction: column;
   width: 282px;
 }
 
-.main__place-card__image {
+.places__card-image {
   width: 282px;
   height: 282px;
-  /* Altura fija para las imágenes de la tarjeta */
   object-fit: cover;
-  /* Recorta la imagen para que cubra el área sin distorsionar */
   display: block;
 }
 
-.main__place-card__image:hover {
+.places__card-image:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.main__place-card__delete-button {
+.places__card-delete-button {
   position: absolute;
   top: 18px;
   right: 15px;
@@ -153,36 +143,31 @@
   z-index: 1;
 }
 
-.main__place-card__delete-button:hover {
+.places__card-delete-button:hover {
   opacity: 0.6;
 }
 
-.main__place-card__info {
+.places__card-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 20px;
   color: #000;
-  /* Color de texto negro para el fondo blanco de la tarjeta */
 }
 
-.main__place-card__title {
+.places__card-title {
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
   margin: 0;
   text-overflow: ellipsis;
-  /* Puntos suspensivos si el texto es muy largo */
   white-space: nowrap;
-  /* Evita que el texto se divida en varias líneas */
   overflow: hidden;
-  /* Oculta el texto que se desborda */
   max-width: 200px;
-  /* Limita el ancho del título */
   font-family: "Inter-Black";
 }
 
-.main__place-card__like-button {
+.places__card-like-button {
   width: 21px;
   height: 19px;
   background-color: transparent;
@@ -194,11 +179,11 @@
   background-size: contain;
 }
 
-.main__place-card__like-button_active {
+.places__card-like-button_active {
   background-image: url("../images/LikeButtonClic.png");
 }
 
-.main__place-card__like-button:hover {
+.places__card-like-button:hover {
   opacity: 0.6;
 }
 
@@ -210,8 +195,7 @@
     box-sizing: border-box;
   }
 
-  /* Perfil del usuario */
-  .main__profile-container {
+  .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,11 +204,11 @@
     margin-bottom: 36px;
   }
 
-  .main__profile-image-container {
+  .profile__image-container {
     margin-bottom: 26px;
   }
 
-  .main__profile-info-container {
+  .profile__info-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,21 +218,21 @@
     width: 100%;
   }
 
-  .main__paragraph-name {
+  .profile__name {
     font-size: 27px;
     line-height: 1.2;
     margin: 0 0 10px 0;
     grid-column: auto;
   }
 
-  .main__paragraph-info {
+  .profile__job {
     font-size: 14px;
     line-height: 1.2;
     margin: 0;
     grid-column: auto;
   }
 
-  .main__button-edit {
+  .profile__button-edit {
     width: 18px;
     height: 18px;
     font-size: 10px;
@@ -256,7 +240,7 @@
     margin-left: 0;
   }
 
-  .main__button-add {
+  .profile__button-add {
     width: 100%;
     max-width: 282px;
     height: 42px;
@@ -266,14 +250,13 @@
     border: 1px solid #ffffff;
   }
 
-  /* Sección de tarjetas */
-  .main__places {
+  .places {
     margin-top: 0;
     padding: 0;
     max-width: 100%;
   }
 
-  .main__places__grid {
+  .places__grid {
     grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
     justify-content: center;
     gap: 20px;
@@ -281,11 +264,11 @@
     max-width: 584px;
   }
 
-  .main__place-card {
+  .places__card {
     width: 100%;
   }
 
-  .main__place-card__image {
+  .places__card-image {
     width: 100%;
     height: 282px;
   }
@@ -299,59 +282,58 @@
     justify-content: center;
   }
 
-  .main__profile-container {
+  .profile {
     margin-bottom: 30px;
   }
 
-  .main__profile-image-container {
+  .profile__image-container {
     margin-bottom: 26px;
   }
 
-  .main__profile-info-container {
+  .profile__info-container {
     margin-bottom: 36px;
   }
 
-  .main__paragraph-name {
+  .profile__name {
     font-size: 27px;
     line-height: 33px;
     max-width: 250px;
     white-space: normal;
   }
 
-  .main__paragraph-info {
+  .profile__job {
     font-size: 14px;
     line-height: 17px;
     max-width: 250px;
     white-space: normal;
   }
 
-  .main__button-edit {
+  .profile__button-edit {
     margin-top: 10px;
   }
 
-  .main__button-add {
+  .profile__button-add {
     width: 100%;
     max-width: 250px;
   }
 
-  /* Sección de tarjetas */
-  .main__places {
+  .places {
     margin-top: 36px;
     margin-bottom: 48px;
   }
 
-  .main__places__grid {
+  .places__grid {
     grid-template-columns: 1fr;
     max-width: 282px;
     margin: 0 auto;
     gap: 20px;
   }
 
-  .main__place-card {
+  .places__card {
     width: 100%;
   }
 
-  .main__place-card__image {
+  .places__card-image {
     width: 100%;
   }
 }
@@ -364,59 +346,62 @@
     justify-content: center;
   }
 
-  .main__profile-container {
+  .profile {
     margin-bottom: 30px;
   }
 
-  .main__profile-image-container {
+  .profile__image-container {
     margin-bottom: 26px;
   }
 
-  .main__profile-info-container {
+  .profile__info-container {
     margin-bottom: 36px;
   }
 
-  .main__paragraph-name {
+  .profile__name {
     font-size: 27px;
     line-height: 33px;
     max-width: 250px;
     white-space: normal;
   }
 
-  .main__paragraph-info {
+  .profile__job {
     font-size: 14px;
     line-height: 17px;
     max-width: 250px;
     white-space: normal;
   }
 
-  .main__button-edit {
+
+  .profile__button-edit {
     margin-top: 10px;
   }
 
-  .main__button-add {
+
+  .profile__button-add {
     width: 100%;
     max-width: 250px;
   }
 
-  /* Sección de tarjetas */
-  .main__places {
+  .places {
     margin-top: 36px;
     margin-bottom: 48px;
   }
 
-  .main__places__grid {
+
+  .places__grid {
     grid-template-columns: 1fr;
     max-width: 282px;
     margin: 0 auto;
     gap: 20px;
   }
 
-  .main__place-card {
+
+  .places__card {
     width: 100%;
   }
 
-  .main__place-card__image {
+  .places__card-image {
     width: 100%;
   }
 }
@@ -429,59 +414,58 @@
     justify-content: center;
   }
 
-  .main__profile-container {
+  .profile {
     margin-bottom: 30px;
   }
 
-  .main__profile-image-container {
+  .profile__image-container {
     margin-bottom: 26px;
   }
 
-  .main__profile-info-container {
+  .profile__info-container {
     margin-bottom: 36px;
   }
 
-  .main__paragraph-name {
+  .profile__name {
     font-size: 27px;
     line-height: 33px;
     max-width: 250px;
     white-space: normal;
   }
 
-  .main__paragraph-info {
+  .profile__job {
     font-size: 14px;
     line-height: 17px;
     max-width: 250px;
     white-space: normal;
   }
 
-  .main__button-edit {
+  .profile__button-edit {
     margin-top: 10px;
   }
 
-  .main__button-add {
+  .profile__button-add {
     width: 100%;
     max-width: 250px;
   }
 
-  /* Sección de tarjetas */
-  .main__places {
+  .places {
     margin-top: 36px;
     margin-bottom: 48px;
   }
 
-  .main__places__grid {
+  .places__grid {
     grid-template-columns: 1fr;
     max-width: 282px;
     margin: 0 auto;
     gap: 20px;
   }
 
-  .main__place-card {
+  .places__card {
     width: 100%;
   }
 
-  .main__place-card__image {
+  .places__card-image {
     width: 100%;
   }
 }
